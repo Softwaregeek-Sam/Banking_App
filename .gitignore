@@ -1,0 +1,31 @@
+############################
+# Backend - Spring Boot
+############################
+backend/target/
+backend/*.log
+backend/**/application*.properties
+backend/**/application*.yml
+backend/.env
+
+############################
+# Frontend - React / Vite
+############################
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+frontend/*.local
+
+############################
+# IDE / OS
+############################
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+############################
+# Logs
+############################
+logs/
+*.log
