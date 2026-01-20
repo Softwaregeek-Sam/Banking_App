@@ -1,115 +1,72 @@
-# 🏦 DemoBank — Full-Stack Digital Banking Platform
+# DemoBank-FullStack
 
-DemoBank is a full-stack digital banking application designed to model
-real-world banking workflows such as user onboarding, account management,
-fund transfers, and transaction handling.
+DemoBank serves as a simple banking platform and e-wallet, empowering users to transfer funds, make deposits, and more.
+I Dived into this project to get a better grasp on React and Redux. Given it's my first time tackling React, there might be places where the code feels a bit raw or improvised, but it gets the job done.
+On the flip side, I'm better with Spring Boot, and that's what's running the show in the backend.
+The whole idea is about delivering a variety of banking features, ensuring everything's user-friendly and responsive.
 
-The project focuses on understanding how a **React-based frontend**
-interacts with a **Spring Boot backend** to deliver secure, consistent,
-and scalable banking features. While the frontend explores state
-management using React and Redux, the backend drives the core business
-logic, data integrity, and authorization rules.
+![demobank_gif](demobank_gif.gif)
 
-This application is built with a strong emphasis on **backend clarity,
-service-layer design, and real-world data flows**, rather than just basic
-CRUD operations.
+## Features
 
----
+- User Registration: New users can sign up for an account.
+- Profile Management: Users can edit their account details.
+- Multiple Accounts: A user can have and manage multiple banking accounts.
+- Admin Features:
+  - Account Deletion: Admins can delete a user's account.
+  - File Access: Admins can download files uploaded by users.
+  - Revoke Access: Admins have the ability to revoke a user's access while retaining the account for record-keeping.
+- User Features:
+  - Account Deletion: Users can delete their own account.
+  - Deposit Funds: Users can deposit money into their accounts.
+  - Comment Section: Users can write comments.
+  - Fund Transfer: Enables users to transfer funds between accounts.
+  - File Upload: Users can upload pertinent files.
 
-## 🏗️ Core Modules & Architecture
+# Running the DemoBank FullStack Project
 
-### 🔐 Authentication & User Management
-- User registration and login
-- Role-based access control (User / Admin)
-- Secure credential handling
-- Backend-driven authorization checks
+## Prerequisites
 
----
+- Ensure you have [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
+- Have [Java JDK](https://www.oracle.com/java/technologies/downloads/#java17) and [Maven](https://maven.apache.org/) set up.
 
-### 👤 User Profile Management
-- View and update user profile details
-- Account ownership mapping
-- User-level access restrictions
+## Without Docker
 
----
+1. **Running the Backend (Spring Boot)**:
+   ```bash
+   cd backend
+   ./mvnw spring-boot:run
+   #On Windows: mvnw.cmd spring-boot:run
+   ```
+2. **Running the Frontend (React)**:
+   ```bash
+   cd frontend
+   npm install
+   npm start
+   ```
 
-### 💳 Account Management
-- Support for multiple accounts per user
-- Account lifecycle management
-- Balance tracking and consistency
+## With Docker
 
----
-
-### 🔄 Transaction & Fund Transfer
-- Secure fund transfers between accounts
-- Backend validation to prevent inconsistent states
-- Transaction history tracking
-- Atomic operations at service level
-
----
-
-### 📂 File & Content Handling
-- User file uploads
-- Admin-level access to uploaded files
-- Controlled access and download permissions
-
----
-
-### 🛡️ Admin Capabilities
-- User account removal
-- Access revocation while retaining historical records
-- File inspection and moderation
-
----
-
-## 🔄 Typical Banking Flow
-
-1. ✅ User registers and logs in
-2. 🏦 User creates and manages bank accounts
-3. 💰 Funds are deposited into accounts
-4. 🔁 Transfers are initiated between accounts
-5. 📊 Transactions are validated and persisted
-6. 🧾 History and balances are updated consistently
-
----
-
-## 📦 Tech Stack
-
-| Layer | Technology |
-|-----|-----------|
-| **Backend** | Java, Spring Boot, Spring Security |
-| **Frontend** | React |
-| **Database** | Postgres |
-| **Security** | Spring Security |
-| **Build Tools** | Maven, npm |
-| **Optional Infra** | Docker, Docker Compose |
-
----
-
-## 🧠 Key Design Highlights
-
-- Backend-driven business logic
-- Clear separation between controllers, services, and persistence
-- Consistent transaction handling
-- Role-aware API access
-- Scalable architecture suitable for real banking use cases
-- Designed to be easily extendable
-
----
-
-## 🚀 Running the Application
+To run the project using Docker, follow these steps:
 
 ### Prerequisites
-- Java JDK (17 recommended)
-- Maven
-- Node.js and npm
-- MySQL (for non-Docker setup)
 
----
+1. Ensure you have [Docker](https://www.docker.com/get-started) installed.
+2. Install [docker-compose](https://docs.docker.com/compose/install/).
 
-### Run Without Docker
+### Setup & Run
 
-#### Backend (Spring Boot)
+First, you need to clone the repository to your local machine:
+
 ```bash
-cd backend
-./mvnw spring-boot:run
+git clone https://github.com/Gitlinkerr/DemoBank-FullStack.git
+cd DemoBank-FullStack
+docker-compose up --build
+```
+
+## Access the Application
+
+Once the containers are up, you can access:
+
+- Frontend: Open your browser and navigate to http://localhost:3000 (or the port you specified in docker-compose.yml for the frontend).
+- Backend: Should be running on http://localhost:8080.
