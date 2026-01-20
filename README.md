@@ -1,6 +1,6 @@
-# 🏦 DemoBank — Full-Stack Digital Banking Platform
+# 🏦 Banking — Full-Stack Digital Banking Platform
 
-DemoBank is a full-stack digital banking application designed to model
+Banking app is a full-stack digital banking application designed to model
 real-world banking workflows such as user onboarding, account management,
 fund transfers, and transaction handling.
 
@@ -79,7 +79,7 @@ CRUD operations.
 |-----|-----------|
 | **Backend** | Java, Spring Boot |
 | **Frontend** | React, Redux |
-| **Database** | MySQL |
+| **Database** | postgres |
 | **Security** | Spring Security |
 | **Build Tools** | Maven, npm |
 | **Optional Infra** | Docker, Docker Compose |
@@ -103,7 +103,7 @@ CRUD operations.
 - Java JDK (17 recommended)
 - Maven
 - Node.js and npm
-- MySQL (for non-Docker setup)
+- Postgres (for non-Docker setup)
 
 ---
 
